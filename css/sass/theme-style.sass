@@ -1,0 +1,72 @@
+$black : #222323
+$white : #ffffff
+
+$color1: #c72641 //Red
+$color2: #68c3cb //Cyan
+$color3: #4d58a2 //Blue
+$color4: #c3c0c0 //Grey
+$color44: #c1c1c1 //light grey
+$color444: #f4f4f4 //lighter grey
+$color4444: #e7e7e7 // offwhite
+//Base Variables
+@import base/reset
+@import base/variables
+@import base/typography
+@import base/buttons
+.wrapper
+    box-sizing: border-box
+    max-width: 1200px
+    margin: 0 auto
+    padding: 0 1em
+    &.narrow
+        max-width: 900px
+    &.Default
+        margin-bottom: 40px
+.pageWrapper
+    width: 100%
+    padding-top: 15%
+    background-size: 100%
+    background-position: top center
+    background-repeat: no-repeat
+    .default
+        width: 100%
+        max-width: 1200px
+        margin-left: auto
+        margin-right: auto
+        padding: 0 1em
+        box-sizing: border-box
+    .narrow
+        width: 100%
+        max-width: 900px
+        margin-left: auto
+        margin-right: auto
+    .fullwidth
+        width: 100%
+    h1.pageTitle,
+    h2,
+    h3
+        margin-bottom: 40px
+        padding-bottom: 20px
+        background-image: url('../images/redline.jpg')
+        background-repeat: no-repeat
+        background-position: bottom center
+    p
+        max-width: 800px
+        margin-left: auto
+        margin-right: auto
+    a.wp-block-button__link
+        background-color: $color1
+        border: none
+        border-radius: 0
+        padding: 12px 50px
+        transition: all 0.2s
+        &:hover
+            background-color: $color2
+            transition: all 0.2s
+@import parts/header
+@import parts/footer
+@import home
+@import parts/block-services
+@import parts/block-specifications
+@import parts/block-packagesCta
+@import parts/block-packagesInfo

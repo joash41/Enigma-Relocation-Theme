@@ -1,0 +1,98 @@
+$mob-menu-max-width: 768px
+
+#header
+    overflow: hidden
+    padding: 15px 0px
+    z-index: 999999
+    position: relative
+    .wrapper
+        @media (min-width: 1800px)
+            max-width: 1800px
+    #menu-wrapper
+        margin-top: 10px
+        display: inline-block
+        float: right
+        @media screen and (max-width: $mob-menu-max-width)
+            text-align: center
+            flex-direction: column
+            display: flex
+            transition: all 0.2s
+            float: none
+            height: 0px
+            background: $color1
+            padding: 0px
+        &.active
+            @media screen and (max-width: $mob-menu-max-width)
+                transition: all 0.2s
+                float: none
+                height: 284px
+                background: $color1
+                padding: 10px 0
+            .current_page_item a
+                @media (max-width: $mob-menu-max-width)
+                    color: $white
+                    padding: 6px
+                    border: 2px solid $color2
+                    background: $black
+                    border-radius: 5px
+        ul
+            list-style: none
+            li.menu-item
+                float: left
+                margin: 20px 10px
+                font-size: 1em
+                @media screen and (max-width: $mob-menu-max-width)
+                    float: none
+                a
+                    +transition(0.2s)
+                    color: $black
+                    padding-bottom: 10px
+                    border-bottom: 2px solid transparent
+                    @media (max-width: $mob-menu-max-width)
+                        color: $white
+                        padding: 10px
+                        border: 2px solid transparent
+                        background: transparent
+                        border-radius: 5px
+                    &:hover
+                        +transition(0.2s)
+                        border-bottom: 2px solid $color1
+                        @media (max-width: $mob-menu-max-width)
+                            color: $white
+                            padding: 6px
+                            border: 2px solid $color2
+                            background: $black
+                            border-radius: 5px
+                &.current_page_item a
+                    @media (min-width: $mob-menu-max-width)
+                        border-bottom: 2px solid $color1
+        ul.sub-menu > li > a
+            color: white
+            &:hover
+                color: $color1
+    .logo_wrapper
+        display: inline-block
+        width: 250px
+        .logo_link
+            display: block
+    .menu-item-has-children ul.sub-menu
+        display: none
+    .menu-item-has-children:hover ul.sub-menu
+        z-index: 999
+        display: block
+        position: absolute
+        background: black
+        padding: 13px
+        @media (max-width: $mob-menu-max-width)
+                position: relative
+                width: 43%
+                margin: 1em auto 0
+        & li
+            padding: 6px 0
+    .mobile-menu-icon
+        cursor: pointer
+        display: none
+        @media screen and (max-width: $mob-menu-max-width)
+            display: inline-block
+            float: right
+        

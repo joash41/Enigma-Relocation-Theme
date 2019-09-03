@@ -1,0 +1,42 @@
+#footer
+    color: #595959
+    background: #272525
+    padding: 50px
+    .wrapper
+        display: flex
+        justify-content: space-between
+        @media (max-width: 800px)
+            text-align: center
+            display: block
+        li.menu-item
+            list-style: none
+            padding-right: 20px
+            float: left
+            @media (max-width: 800px)
+                float: none
+                padding: 0 0 10px 0
+            a
+                transition: all 0.2s
+                border-bottom: 2px solid transparent
+                padding-bottom: 10px
+                color: #595959
+                @media (max-width: 800px)
+                    border-bottom: none
+                &:hover
+                    border-bottom: 2px solid $color1
+                    transition: all 0.3s
+                    @media (max-width: 800px)
+                        border-bottom: none
+            &.current_page_item a
+                transition: all 0.3s
+                border-bottom: 2px solid $color1
+                padding-bottom: 10px
+                color: #595959
+                @media (max-width: 800px)
+                        border-bottom: none
+        .copyright
+            text-align: right
+            margin: 0 0 0 auto
+            @media (max-width: 800px)
+                text-align: center
+                padding-top: 25px

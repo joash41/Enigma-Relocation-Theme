@@ -1,0 +1,46 @@
+.packagesInfo
+    .imgWraps
+        display: flex
+        justify-content: space-between
+        .package_icon_wrapper 
+            border-bottom: 80px solid #ffffff
+            list-style: none
+            background: #a3a3a3
+            padding: 50px
+            height: auto
+            justify-content: center
+            display: flex
+            box-sizing: border-box
+            flex-direction: column
+            @media (max-width: 900px)
+                padding: 20px
+                width: 22%
+                border-bottom: 40px solid $white
+            &.active
+                border-bottom: 80px solid $color1
+                background: $color1
+                @media (max-width: 768px)
+                    border-bottom: 40px solid $color1
+            &:hover
+                background: $color1
+            img
+                width: 100%
+                max-height: 90px
+                max-width: 100px
+                margin: auto
+            h4
+                text-align: center
+                padding-top: 20px
+                color: $white
+                margin-bottom: 0px
+                @media (max-width: 768px)
+                    font-size: 0.9em
+    .package_content_wrapper
+        padding: 50px
+        background: $color1
+        color: $white
+        display: none
+        p
+            max-width: 100%
+        &.active
+            display: block

@@ -1,0 +1,118 @@
+.services
+    width: 100%
+    position: relative
+    background-size: calc(100% - 280px) auto
+    background-position: center right
+    background-repeat: no-repeat
+    max-width: 1000px
+    margin: 20px auto 20px auto
+    @media screen and (max-width: 700px)
+        padding-top: 180px
+        background-size: 100%
+        background-position: top
+    .service
+        display: block
+        label
+            background: $color4
+            border-top: 4px solid $white
+            border-bottom: 4px solid $white
+            border-right: 8px solid $white
+            cursor: pointer
+            display: inline-block
+            font-size: 16px
+            color: $white
+            font-weight: bold
+            padding: 15px 20px
+            position: relative
+            width: 280px
+            box-sizing: border-box
+            z-index: 100
+            padding-right: 20px
+            text-align: center
+            color: $white
+            i
+                width: 20px
+                position: absolute
+                right: 5px
+                text-align: center
+            @media screen and (max-width: 700px)
+                width: 100%
+                border-right: 0px
+        &:first-child
+            label
+                border-top: 0px
+        &:last-child
+            label
+                border-bottom: 0px
+        article
+            left: 280px
+            min-width: 300px
+            padding: 10px 20px
+            position: absolute
+            top: 0
+            display: none
+            box-sizing: border-box
+            width: calc(100% - 280px)
+            height: 100%
+            @media screen and (max-width: 700px)
+                width: 100%
+                position: relative
+                left: 0px
+            .spaceMe
+                height: 100%
+                display: inline-block
+                vertical-align: middle
+                width: 1px
+                @media screen and (max-width: 700px)
+                    display: none
+            .serviceContent
+                display: inline-block
+                vertical-align: middle
+                width: 97%
+                box-sizing: border-box
+                text-align: left
+                p
+                    margin: 0px
+                @media screen and (max-width: 700px)
+                    width: 100%
+                    p
+                        margin-bottom: 15px
+        &.active
+            label
+                background: $color1
+                border-right-color: $color1
+                border-top-color: $color1
+                border-bottom-color: $color1
+                i
+                    display: none
+            article
+                display: block
+                color: $white
+                background-color: $color1
+    &.right
+        background-position: center left
+        @media screen and (max-width: 700px)
+            padding-top: 180px
+            background-size: 100%
+            background-position: top
+        .service
+            text-align: right
+            label
+                background: $color4
+                border-bottom: 4px solid $white
+                border-right: 0px solid $white
+                border-left: 8px solid $white
+                @media screen and (max-width: 700px)
+                    width: 100%
+                    border-left: 0px
+            &:last-child
+                label
+                    border-bottom: 0px
+            &.active
+                article
+                    left: 0px
+                label
+                    background: $color1
+                    border-left-color: $color1
+                    border-top-color: $color1
+                    border-bottom-color: $color1

@@ -1,0 +1,64 @@
+img.home_banner
+    margin-top: -100px
+    animation: colorchange 6s infinite linear
+    animation-delay: 0s
+    @media (max-width: 834px)
+        margin-top: -10px
+.squeezedParagraph
+    margin: 0 auto
+    max-width: 700px
+.before_home_info
+    margin-top: 50px
+    height: 75px
+    background: #b52b44
+    clip-path: polygon(0% 0%, 45% 0, 50% calc(0% + 60px), 55% 0%, 100% 0%, 100% 10px, calc(55% + 5px) 10px, 50% calc(0% + 75px), calc(45% - 5px) 10px, 0% 10px)
+    @media (max-width: 768px)
+        margin-top: 80px
+.home_info
+    background-attachment: fixed
+    min-height: 356px
+    margin-top: -66px
+    clip-path: polygon(0% 0%, calc(45% - 5px) 0, 50% calc(0% + 65px), calc(55% + 5px) 0%, 100% 0%, 100% calc(100% - 60px), 55% calc(100% - 60px), 50% 100%, 45% calc(100% - 60px), 0% calc(100% - 60px))
+.after_home_info
+    margin-top: -60px
+    height: 75px
+    background: #e5f1f2
+    clip-path: polygon(0% 0%, 45% 0, 50% calc(0% + 60px), 55% 0%, 100% 0%, 100% 10px, calc(55% + 5px) 10px, 50% calc(0% + 75px), calc(45% - 5px) 10px, 0% 10px)
+.full-width
+    background-repeat: no-repear
+    background-size: cover
+    background-position: center center
+    .info
+        display: flex
+        @media (max-width: 768px)
+            flex-direction: column
+    .home_info_wrapper
+        box-sizing: border-box
+        padding: 50px 3em 120px 3em
+        width: 50%
+        color: white
+        @media (max-width: 768px)
+            width: 100%
+            padding: 100px 3em 0px 3em
+            &:last-child
+                padding-bottom: 150px
+        h2
+            color: white
+            text-align: center
+.specs_container
+    margin-top: -65px
+    padding: 100px 0 120px
+    @media (max-width: 768px)
+        padding: 50px 0 80px
+    h2
+        text-align: center
+        @media (max-width: 768px)
+            padding-top: 80px
+
+    
+
+@keyframes colorchange
+    0%,100%  
+        filter: hue-rotate(0deg)
+    50% 
+        filter: hue-rotate(360deg)
